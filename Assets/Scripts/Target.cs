@@ -9,8 +9,8 @@ public class Target : MonoBehaviour
     protected float speed = 10.0f;
     protected int score = 2;
 
+    protected Rigidbody rb;
     private MainManager mainManager;
-    private Rigidbody rb;
 
 
     protected virtual void OnEnable()
@@ -40,7 +40,7 @@ public class Target : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void DestoyIfOutOfBounds()
+    private void DestoyIfOutOfBounds() // ABSTRACTION
     {
         if (transform.position.x > 15.0f)
         {
