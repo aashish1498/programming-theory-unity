@@ -20,4 +20,10 @@ public class SlowTarget : Target
     {
         
     }
+
+    protected override void Move() // POLYMORPHISM
+    {
+        var verticalSpeed = rb.velocity.y +  Random.Range(-0.1f, 0.1f);
+        rb.velocity = new Vector3(speed, verticalSpeed, 0);
+    }
 }

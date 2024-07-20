@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class MainManager : MonoBehaviour
 {
-    public static MainManager Instance { get; private set; }
+    public static MainManager Instance { get; private set; } // ENCAPSULATION
     private int highScore = 0;
     private int currentScore = 0;
 

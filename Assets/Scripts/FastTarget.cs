@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FastTarget : Target
+public class FastTarget : Target // INHERITANCE
 {
     protected override void OnEnable()
     {
