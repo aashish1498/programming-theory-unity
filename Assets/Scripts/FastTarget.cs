@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FastTarget : Target
 {
-    private void OnEnable()
+    protected override void OnEnable()
     {
         speed *= 2;
         score *= 2;
+        base.OnEnable();
     }
     void Start()
     {

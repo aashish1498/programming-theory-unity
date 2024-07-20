@@ -35,7 +35,7 @@ public class MainManager : MonoBehaviour
     {
         highScore = Math.Max(highScore, currentScore);
         currentScore = 0;
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("Title");
     }
 
     public void AddToScore(int addition)

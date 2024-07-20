@@ -10,9 +10,8 @@ public class SpawnManager : MonoBehaviour
     private float spawnInterval = 1.5f;
     private float spawnDelay = 1.0f;
 
-    private float yLimit = 3.0f;
+    private float yLimit = 2.5f;
     private float xPos = -15;
-    private float zpos = -0.5f;
     void Start()
     {
         InvokeRepeating(nameof(SpawnRandomTarget), spawnDelay, spawnInterval);
@@ -27,7 +26,7 @@ public class SpawnManager : MonoBehaviour
     {
         int index = Random.Range(0, targets.Length);
         var target = targets[index];
-        var position = new Vector3(xPos, Random.Range(-1 * yLimit, yLimit), zpos);
+        var position = new Vector3(xPos, Random.Range(-1 * yLimit, yLimit), target.transform.position.z);
         Instantiate(target, position, target.transform.rotation);
     }
 }
